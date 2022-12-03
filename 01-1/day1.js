@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 // const lines = fs
-//   .readFileSync("data.txt", { encodin: "utf-8" })
+//   .readFileSync("data.txt", { encoding: "utf-8" })
 //   .split("\n")
 //   .filter((line) => Boolean(line))  //remove if line is falsy (does not have code)
 //   .map((item) => parseInt(item));   //make each line of data a number
@@ -14,5 +14,5 @@ const arr = fs
   .map((item) => item.reduce((a, b) => a + b, 0))   //add up numbers within each array
   .sort((a, b) => b - a)    //sort array from highest to lowest number
 
-// console.log(arr[0])
+console.log(arr[0])
 console.log(arr[0] + arr[1] + arr[2])
