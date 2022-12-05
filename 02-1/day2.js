@@ -12,6 +12,7 @@ const lines = fs
   .split("\r\n")
 //   .map((item) => parseInt(item));   //make each line of data a number
 
+//part 1
 // const counter = (data) => {
 //   return data.map(item => {
 //     let count = 0
@@ -45,6 +46,7 @@ const lines = fs
 //   })
 // }
 
+//part 2
 const counter = (data) => {
   return data.map(item => {
     let count = 0
