@@ -19,13 +19,22 @@ const rucksack = fs
   //   return [item.slice(0, item.length/2), item.slice(item.length/2, item.length)]
   // })
 
-const triple = (data) => {
+const triple = () => {
   const arr = []
-  for (i = 0; i < data.length; i = i + 3) {
-    arr.push(data.slice(i, i + 3))
+  for (i = 0; i < rucksack.length; i = i + 3) {
+    arr.push(rucksack.slice(i, i + 3))
   }
   return arr
 }
+
+//did not use
+// const sliceAndSplit = () => {
+//   test.map(line => {
+//     const part1 = line.slice(0, line.length/2)
+//     const part2 = line.slice(line.length / 2)
+//     console.log([part1, part2])
+//   })
+// }
 
 //part 1
 // const anomaly = (input) => {
@@ -60,7 +69,6 @@ const anomaly = (input) => {
       }
     }
     return merge
-    // return [... new Set(arr)]
   })
 }
 
@@ -92,4 +100,6 @@ const assign = (arr) => {
   return numbers.reduce((a, b) => a + b, 0)
 }
 
-console.log(assign(anomaly(triple(rucksack))))
+console.log(assign(anomaly(triple())))
+
+// sliceAndSplit() - did not use
