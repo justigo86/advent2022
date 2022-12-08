@@ -1,4 +1,4 @@
-const fs = require('fs');
+import { readFileSync } from 'node:fs'
 
 const test = [
   'A Y',
@@ -7,8 +7,7 @@ const test = [
   'A Y'
 ]
 
-const lines = fs
-  .readFileSync("data.txt", { encoding: "utf-8" })
+const lines = readFileSync("data.txt", { encoding: "utf-8" })
   .split("\r\n")
 //   .map((item) => parseInt(item));   //make each line of data a number
 

@@ -1,4 +1,4 @@
-const fs = require('fs');
+import { readFileSync } from 'node:fs'
 
 const test = [
   'vJrwpWtwJgWrhcsFMMfFFhFp',
@@ -12,8 +12,7 @@ const test = [
 //   return [item.slice(0, item.length/2), item.slice(item.length/2, item.length)]
 // })
 
-const rucksack = fs
-  .readFileSync("data.txt", { encoding: "utf-8" })
+const rucksack = readFileSync("data.txt", { encoding: "utf-8" })
   .split("\r\n")
   // .map(item => {   //commented out for part 2
   //   return [item.slice(0, item.length/2), item.slice(item.length/2, item.length)]

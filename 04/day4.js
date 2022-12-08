@@ -1,7 +1,6 @@
-const fs = require('fs');
+import { readFileSync } from 'node:fs'
 
-const lines = fs
-  .readFileSync("data.txt", { encoding: "utf-8" })
+const lines = readFileSync("data.txt", { encoding: "utf-8" })
   // .replace(/-/g, '')
   .split("\r\n")
   .map(item => item.split(","))
